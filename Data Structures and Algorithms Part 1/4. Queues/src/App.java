@@ -2,21 +2,18 @@ import java.util.Queue;
 import java.util.Stack;
 public class App {
     public static void main(String[] args) throws Exception {
-        ArrayQueue q = new ArrayQueue();
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.enqueue(5);
-        q.enqueue(6);
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        System.out.println(q.isFull());
-        System.out.println(q);
+        StackUsingQueues stack = new StackUsingQueues();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
+        System.out.println(stack.size());
+        System.out.println(stack.isEmpty());
+        stack.print();
+
     }
     public static void reverse(Queue<Integer> queue)
     {

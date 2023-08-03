@@ -11,7 +11,7 @@ public class ArrayQueue {
             queue[rear++] = item;
         
         else 
-            throw new IllegalArgumentException();
+            throw new IllegalStateException();
     }
     
     public int dequeue()
@@ -19,7 +19,10 @@ public class ArrayQueue {
         if(isEmpty())
             throw new IllegalArgumentException();
         else
+        {
+            queue[front] = 0;
             return queue[front++];
+        }
     }
     public boolean isFull()
     {
@@ -33,7 +36,7 @@ public class ArrayQueue {
     @Override
     public String toString()
     {
-        var content = Arrays.copyOfRange(queue, front,rear);
-        return Arrays.toString(content);
+        // var content = Arrays.copyOfRange(queue, front,rear);
+        return Arrays.toString(queue);
     }
 }
